@@ -16,6 +16,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -23,14 +24,6 @@ body {
   margin: 0 auto;
   position: relative;
   height: 100%;
-}
-
-.gallery-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 header {
@@ -250,27 +243,23 @@ article.background {
 }
 
 .gallery {
-  margin: 30px 0;
-}
-
-.gallery .row {
+  margin: 37px -37px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  margin: 0 -37px;
 }
 
 .gallery .box {
+  display: flex;
   flex-basis: 33.33333%;
   overflow: hidden;
-  display: flex;
   padding: 37px;
-  height: 30vw;
+  height: 33vw;
 }
 
-.gallery .row img {
+.gallery img {
   object-fit: cover;
   min-width: 100%;
-  overflow: hidden;
 }
 
 footer {
