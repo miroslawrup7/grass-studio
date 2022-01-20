@@ -28,10 +28,9 @@ body {
 
 header {
   height: 760px;
-  width: 100%;
-  background: white url("../images/seacoast.jpg") center center no-repeat;
+  background: white url("../images/seacoast.jpg") no-repeat;
   background-size: cover;
-  background-position: center calc(50% - 80px);
+  background-position: center;
 }
 
 .logo-nav {
@@ -276,6 +275,7 @@ footer .wrapper p {
   font-weight: 400;
   font-size: 16px;
   color: white;
+  margin-left: 20px;
 }
 
 #lightbox {
@@ -311,4 +311,146 @@ footer .wrapper p {
   right: -10px;
   font-size: 26px;
   padding: 10px;
+}
+
+@media (max-width: 1260px) {
+  .wrapper {
+    width: 1040px;
+  }
+
+  .slogan-box {
+    bottom: 85px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .wrapper {
+    width: 800px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  header .logo {
+    padding: 0;
+    margin-top: 25px;
+  }
+
+  header {
+    height: 500px;
+  }
+
+  .slogan-box {
+    bottom: 36px;
+    right: 20px;
+    width: 380px;
+  }
+
+  .slogan-box .slogan {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .slogan-wrap p {
+    line-height: 38px;
+  }
+
+  .slogan-wrap {
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+  .sub-slogan-wrap {
+    flex-direction: column;
+  }
+
+  .slogan-box .sub-slogan {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .btn.header {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .gallery .box {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  .wrapper {
+    width: 600px;
+  }
+
+  .btn {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px 25px;
+    line-height: 29px;
+    height: 36px;
+  }
+
+  .btn.header {
+    border: 2px solid white;
+  }
+
+  article .content {
+    flex-direction: column;
+  }
+
+  article img {
+    float: none;
+    padding: 0 0 25px 0;
+  }
+
+  .gallery .box {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 400px;
+  }
+
+  .btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0px 20px;
+    line-height: 29px;
+    height: 36px;
+  }
+
+  .slogan-box {
+    bottom: 36px;
+    right: 0;
+    width: 100%;
+  }
+
+  .slogan-wrap p {
+    padding: 10px;
+  }
+
+  .logo-nav {
+    justify-content: center;
+  }
+
+  article .title {
+    font-size: 40px;
+  }
+
+  .gallery .box {
+    padding: 0;
+  }
+
+  footer .wrapper p {
+    margin-left: 0;
+  }
+
+  footer .wrapper {
+    justify-content: center;
+
 }
