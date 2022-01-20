@@ -277,3 +277,37 @@ footer .wrapper p {
   font-size: 16px;
   color: white;
 }
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  padding: 100px 0;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: -10px;
+  font-size: 26px;
+  padding: 10px;
+}
