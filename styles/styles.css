@@ -117,6 +117,8 @@ header .logo {
   color: #fcfcfc;
 }
 
+/* Slogan header */
+
 .slogan-box {
   position: absolute;
   bottom: 160px;
@@ -195,6 +197,8 @@ header .logo {
   background-color: #627478;
 }
 
+/* ARTICLES */
+
 article {
   padding: 30px 0 60px 0;
 }
@@ -241,6 +245,8 @@ article.background {
   background-color: #f9f9f9;
 }
 
+/* GALLERY */
+
 .gallery {
   margin: 37px -37px;
   display: flex;
@@ -278,6 +284,8 @@ footer .wrapper p {
   margin-left: 20px;
 }
 
+/* LIGHTbOX */
+
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -313,6 +321,12 @@ footer .wrapper p {
   padding: 10px;
 }
 
+.hamburger {
+  display: none;
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 1260px) {
   .wrapper {
     width: 1040px;
@@ -328,10 +342,6 @@ footer .wrapper p {
     width: 800px;
   }
 
-  .navigation {
-    display: none;
-  }
-
   header .logo {
     padding: 0;
     margin-top: 25px;
@@ -339,6 +349,25 @@ footer .wrapper p {
 
   header {
     height: 500px;
+  }
+
+  .navigation > a,
+  .sub-nav-btn {
+    padding: 20px 10px;
+  }
+
+  header .logo {
+    font-size: 40px;
+  }
+
+  .navigation {
+    align-items: flex-start;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .sub-nav-content {
+    width: 135px;
   }
 
   .slogan-box {
@@ -370,9 +399,20 @@ footer .wrapper p {
     text-align: center;
   }
 
+  .btn {
+    font-size: 19px;
+    padding: 0px 20px;
+    line-height: 35px;
+    height: 42px;
+  }
+
   .btn.header {
     margin: 0 auto;
     margin-top: 30px;
+  }
+
+  article .title {
+    font-size: 40px;
   }
 
   .gallery .box {
@@ -383,6 +423,108 @@ footer .wrapper p {
 @media (max-width: 860px) {
   .wrapper {
     width: 600px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    height: 100%;
+    min-width: 200px;
+    z-index: 1000;
+  }
+
+  .navigation.mobile-open {
+    display: flex;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  .navigation .sub-nav button,
+  .navigation a {
+    color: white;
+    cursor: pointer;
+  }
+  .navigation .sub-nav,
+  .navigation a {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .sub-nav-btn {
+    width: 100%;
+  }
+
+  .drop-menu::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 10px;
+  }
+
+  .drop-menu-down::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 10px;
+  }
+
+  .navigation > a,
+  .sub-nav-btn {
+    padding: 10px;
+  }
+
+  .sub-nav-content {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 10px;
+    text-align: left;
+    width: auto;
+    transition: none;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: none;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    font-weight: 500;
+    font-size: 21px;
+  }
+
+  .sub-nav-content.drop-down {
+    /* top: unset; */
+    height: auto;
+    position: relative;
+  }
+
+  .sub-nav:hover .sub-nav-content {
+    top: unset;
+  }
+
+  .sub-nav-content a:hover {
+    background-color: transparent;
+    text-shadow: none;
+    color: white;
+  }
+
+  .sub-nav-content a {
+    padding: 7px 0;
+  }
+
+  .logo-nav .hamburger {
+    font-size: 30px;
+    margin-top: 25px;
   }
 
   .btn {
@@ -432,10 +574,6 @@ footer .wrapper p {
 
   .slogan-wrap p {
     padding: 10px;
-  }
-
-  .logo-nav {
-    justify-content: center;
   }
 
   article .title {
